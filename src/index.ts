@@ -1,6 +1,6 @@
 import { App } from "vue";
-import LImage from "./LImage";
-import LText from "./LText";
+import LImage from "./components/LImage";
+import LText from "./components/LText";
 
 const components = [LImage, LText];
 

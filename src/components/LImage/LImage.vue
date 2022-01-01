@@ -37,7 +37,7 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
+<style lang="less" scoped>
 .l-image-component {
   max-width: 100%;
   position: relative !important;

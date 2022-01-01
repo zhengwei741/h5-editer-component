@@ -1,13 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <l-text text="hello"></l-text>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import LText from "./components/LText";
 
 export default defineComponent({
   name: "App",
-  components: {},
+  components: {
+    LText,
+  },
 });
 </script>
 
