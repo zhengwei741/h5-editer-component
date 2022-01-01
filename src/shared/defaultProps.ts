@@ -87,7 +87,7 @@ export const textDefaultProps = without(
 );
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export const transformToComponentProps = <T extends {}>(props: T): any => {
+export const transformToComponentProps = <T extends {}>(props: T) => {
   return mapValues(props, (item: any) => {
     return {
       type: (item as any).constructor as StringConstructor,
