@@ -1,4 +1,4 @@
-export interface CommonDefaultProps {
+export interface CommonComponentProps {
   // actions
   actionType: string;
   url: string;
@@ -24,7 +24,7 @@ export interface CommonDefaultProps {
   right: string;
 }
 
-export interface TextComponentProps extends CommonDefaultProps {
+export interface TextComponentProps extends CommonComponentProps {
   text: string;
   fontSize: string;
   fontFamily: string;
@@ -39,7 +39,7 @@ export interface TextComponentProps extends CommonDefaultProps {
 
 import { mapValues, without } from "lodash-es";
 
-export const commonDefaultProps: CommonDefaultProps = {
+export const commonDefaultProps: CommonComponentProps = {
   // actions
   actionType: "",
   url: "",
@@ -87,7 +87,7 @@ export const textDefaultProps = without(
 );
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export const transformToComponentProps = <T extends {}>(props: T) => {
+export const transformToComponentProps = <T extends {}>(props: T): any => {
   return mapValues(props, (item: any) => {
     return {
       type: (item as any).constructor as StringConstructor,
@@ -96,7 +96,7 @@ export const transformToComponentProps = <T extends {}>(props: T) => {
   });
 };
 
-export interface ImageComponentProps extends CommonDefaultProps {
+export interface ImageComponentProps extends CommonComponentProps {
   src: string;
 }
 export const imageDefaultProps: ImageComponentProps = {

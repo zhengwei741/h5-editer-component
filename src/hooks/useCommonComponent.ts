@@ -1,11 +1,11 @@
 import { computed } from "vue";
 import { pick } from "lodash-es";
-import { TextComponentProps } from "../shared/defaultProps";
+import { CommonComponentProps } from "../shared/defaultProps";
 
-const useCommonComponent = function (
-  props: Readonly<Partial<TextComponentProps>>,
+const useCommonComponent = (
+  props: Readonly<Partial<CommonComponentProps & { isEditing: boolean }>>,
   picks: string[]
-) {
+): any => {
   const styleProps = computed(() => pick(props, picks));
 
   const handleClick = () => {

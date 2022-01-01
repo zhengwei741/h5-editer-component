@@ -3,4 +3,6 @@ module.exports = {
   transform: {
     "^.+\\.vue$": "vue-jest",
   },
+  // 忽略lodash-es
+  transformIgnorePatterns: ["/!node_modules\\/lodash-es/"],
 };
